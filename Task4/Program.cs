@@ -41,25 +41,20 @@ void PrintArray(int[,] array)
 
 void FindElementFirstEntrance(int[,] array)
 {
-    int Count = 0;
     for (int i = 0; i < array.GetLength(0); i++)
     {
         for (int j = 0; j < array.GetLength(1); j++)
+
         {
             if (number == array[i, j])
             {
                 Console.WriteLine($"Позиция по горизонтали {i + 1}, по вертикали {j + 1}");
-                Count = 1;
-                break;
+                return;
             }
-            if (Count == 1)
-                break;
         }
     }
-    if (Count == 0)
-    {
-        Console.WriteLine($"Введенного элемента {number} нет в данном массиве");
-    }
+   Console.WriteLine($"Введенного элемента {number} нет в данном массиве");
 }
+
 
 
